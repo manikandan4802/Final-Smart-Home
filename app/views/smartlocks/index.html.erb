@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Smartlocks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Serial num</th>
+      <th>Company</th>
+      <th>Property</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @smartlocks.each do |smartlock| %>
+      <tr>
+        <td><%= smartlock.serial_num %></td>
+        <td><%= smartlock.company_id %></td>
+        <td><%= smartlock.property_id %></td>
+        <td><%= link_to 'Show', smartlock %></td>
+        <td><%= link_to 'Edit', edit_smartlock_path(smartlock) %></td>
+        <td><%= link_to 'Destroy', smartlock, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Smartlock', new_smartlock_path %>

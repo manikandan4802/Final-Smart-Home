@@ -1,0 +1,17 @@
+<p>
+  <strong>Company name:</strong>
+  <%= @company.company_name %>
+</p>
+
+<p>
+  <strong>Agent name:</strong>
+  <%= @company.agent_name %>
+</p>
+
+<p>
+  <strong>Phone number:</strong>
+  <%= @company.phone_number %>
+</p>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>

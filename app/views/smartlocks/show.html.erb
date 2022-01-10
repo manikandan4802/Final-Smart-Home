@@ -1,0 +1,19 @@
+
+
+<p>
+  <strong>Serial num:</strong>
+  <%= @smartlock.serial_num %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @smartlock.company_id %>
+</p>
+
+<p>
+  <strong>Property:</strong>
+  <%= @smartlock.property_id %>
+</p>
+
+<%= link_to 'Edit', edit_smartlock_path(@smartlock) %> |
+<%= link_to 'Back', smartlocks_path %>
